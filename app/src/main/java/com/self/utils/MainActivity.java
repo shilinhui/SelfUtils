@@ -61,11 +61,15 @@ public class MainActivity extends AppCompatActivity {
                         PermissionUtils.startLocationSettings(mContext);
                         break;
                     case 2:
-                        PermissionUtils.chekPermissions(mActivity, new String[]{Manifest.permission.CAMERA}, new PermissionUtils.IPermissionsResult() {
-                            @Override
-                            public void onResult(boolean isPass) {
-                                Toast.makeText(getApplicationContext(),Manifest.permission.CAMERA + " 权限申请" + (isPass ? "通过" : "失败"),Toast.LENGTH_SHORT).show();
-                            }
+                        PermissionUtils.chekPermissions(mActivity
+                                , new String[]{Manifest.permission.ACCESS_COARSE_LOCATION
+                                        , Manifest.permission.ACCESS_FINE_LOCATION
+                                        , Manifest.permission.CAMERA}
+                                , new PermissionUtils.IPermissionsResult() {
+                                    @Override
+                                    public void onResult(boolean isPass) {
+                                        Toast.makeText(getApplicationContext()," 权限申请" + (isPass ? "通过" : "失败"),Toast.LENGTH_SHORT).show();
+                                    }
                         });
                         break;
                     case 3:
