@@ -3,6 +3,7 @@
 PermissionUtils 使用实例
 
 //请求权限
+
 PermissionUtils.chekPermissions(mActivity
                                 , new String[]{Manifest.permission.ACCESS_COARSE_LOCATION
                                         , Manifest.permission.ACCESS_FINE_LOCATION
@@ -15,8 +16,11 @@ PermissionUtils.chekPermissions(mActivity
                         });
                         
  //注册结果监听          
+ 
  @Override
+ 
  public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+     
      super.onRequestPermissionsResult(requestCode, permissions, grantResults);
 
      PermissionUtils.onRequestPermissionsResult(mActivity,requestCode,permissions,grantResults);
