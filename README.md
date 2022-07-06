@@ -1,6 +1,16 @@
 # SelfUtils
 所需的通用工具类
 
+DisplayUtils： Navbar的设置，屏幕或窗口的宽高获取，px和dp的转换
+
+FileUtils： 文件的处理，如：创建文件，复制文件，文件大小等
+
+NetWorkUtils： 网络状态获取，包括移动。WiFi，热点
+
+PackageUtils： 应用信息处理
+
+PermissionUtils： 权限处理
+
 PermissionUtils 使用示例
 
 请求权限
