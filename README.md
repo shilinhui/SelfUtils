@@ -1,6 +1,7 @@
 # SelfUtils
 所需的通用工具类
 PermissionUtils 使用实例
+
 //请求权限
 PermissionUtils.chekPermissions(mActivity
                                 , new String[]{Manifest.permission.ACCESS_COARSE_LOCATION
