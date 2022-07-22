@@ -3,6 +3,7 @@ package com.self.myapplication;
 import static android.content.Context.WINDOW_SERVICE;
 
 import android.app.Activity;
+import android.app.WindowConfiguration;
 import android.content.Context;
 import android.content.res.Configuration;
 import android.graphics.Point;
@@ -117,5 +118,16 @@ public class DisplayUtils {
     public static int px2dip(Context context, float pxValue) {
         final float scale = context.getResources().getDisplayMetrics().density;
         return (int) (pxValue / scale + 0.5f);
+    }
+
+    /**
+     * 是否处于分屏模式，分屏和浮窗都属于activity.isInMultiWindowMode()
+     */
+    public static boolean isSplitScreenMode(Context context) {
+        if (context != null) {
+            return WindowConfiguration.isSplitScreenWindowingMode(context.getResources()
+                    .getConfiguration().windowConfiguration.getWindowingMode());
+        }
+        return false;
     }
 }
