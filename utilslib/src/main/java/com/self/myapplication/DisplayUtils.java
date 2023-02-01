@@ -3,7 +3,7 @@ package com.self.myapplication;
 import static android.content.Context.WINDOW_SERVICE;
 
 import android.app.Activity;
-import android.app.WindowConfiguration;
+//import android.app.WindowConfiguration;
 import android.content.Context;
 import android.content.res.Configuration;
 import android.graphics.Point;
@@ -123,11 +123,11 @@ public class DisplayUtils {
     /**
      * 是否处于分屏模式，分屏和浮窗都属于activity.isInMultiWindowMode()
      */
-    public static boolean isSplitScreenMode(Context context) {
+    /*public static boolean isSplitScreenMode(Context context) {
         if (context != null) {
             return WindowConfiguration.isSplitScreenWindowingMode(context.getResources()
                     .getConfiguration().windowConfiguration.getWindowingMode());
         }
         return false;
-    }
+    }**/
 }
